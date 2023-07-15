@@ -18,8 +18,8 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
     resize: none;
-    font-family: "verdana";
-    font-size: 16px;
+    font-family: "san serif";
+    font-size: 20px;
 }
 
 .add-note{
