@@ -1,6 +1,42 @@
 body{
     margin: 0;
     background: rgb(2, 124, 133);
+    
+}
+
+.side{
+    width: 500px;
+    height: 620px;
+    float: left;
+    background: url(/images/pexels-vlada-karpovich-4668363.jpg);
+    object-fit: fill;
+    top: 0px;
+    position: relative;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.heading{
+    margin: 4rem;
+}
+
+.heading em{
+    color: rgb(241, 121, 161);
+    text-decoration: wavy;
+}
+
+.side h1{
+    color: white;
+    font-family: 'gamersdemo';
+    position: absolute;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: end;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 #app{
@@ -20,6 +56,11 @@ body{
     resize: none;
     font-family: "san serif";
     font-size: 20px;
+    transition: all 0.3s;
+}
+
+.note:hover{
+    background-color: rgb(156, 166, 175);
 }
 
 .add-note{
@@ -37,5 +78,9 @@ body{
 
 .add-note:hover{
     background: rgba(43, 42, 42, 0.5);
-    transition: background 0.2s;
+    transition: 0.2s;
 }
+
+
+
+

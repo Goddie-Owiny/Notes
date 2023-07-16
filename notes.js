@@ -1,4 +1,3 @@
-
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-note");
 
@@ -7,12 +6,14 @@ getNotes().forEach(note =>{
     notesContainer.insertBefore(noteElement, addNoteButton);
 });
 
-function getNotes(){
-return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]")
+addNoteButton.addEventListener("click", () => addNote());
+
+function getNotes() {
+return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
 }
 
 function saveNotes(notes){
-localStorage.setItem("stickynotes-notes", JSON.stringify(notes))
+localStorage.setItem("stickynotes-notes", JSON.stringify(notes));
 }
 
 function createNoteElement(id,content){
@@ -36,16 +37,32 @@ if (doDelete) {
 return element;
 }
 
-function addNote(){
 
+function addNote(){
+ const Notes = getNotes();
+ const noteObject = {
+    id: Math.floor(math.random () * 100000),
+    content: ""
+};
+
+const noteElement = createNoteElement(noteObject.id, noteObject.content);
+notesContainer.insertBefore(noteElement, addNoteButton);
+
+Notes.push(noteObject);
+saveNotes(Notes);
 }
 
 function updateNote(id, newContent){
-console.log("Updating Note....");
-console.log(id, newContent);
+const notes = getNotes();
+const targetNote = notes.filter(note => note.id == id)[0];
+
+targetNote.content = newContent;
+saveNotes(notes)
 }
 
 function deleteNote(id, element){
-    console.log("Deleting Note....");
-    console.log(id, newContent);
+   const notes = getNotes().filter(note.id != id);
+
+   saveNotes(notes);
+   notesContainer.removeChild(element);
 }
