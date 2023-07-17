@@ -85,6 +85,11 @@ body{
     transition: 0.2s;
 }
 
-
-
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(45deg, #3b473b, #027c85, #f179a1);
+}
 
