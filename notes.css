@@ -1,7 +1,11 @@
 body{
     margin: 0;
-    background: rgb(2, 124, 133);
     
+    
+}
+
+.container-fluid{
+    background: rgb(2, 124, 133);
 }
 
 .side{
