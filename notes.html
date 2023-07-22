@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/animate.css/animate.css">
     <link rel="stylesheet" href="/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/bootstrap-icons/bootstrap-icons.json">
-    <link rel="stylesheet" href="/bootstrap-icons/fonts/bootstrap-icons.woff">
 </head>
 <body>
     
@@ -25,17 +23,20 @@
                             <div class="bi bi-share-fill"></div>
                         </div>
                         <div class="icon">
-                            <div class="bi bi-save"></div>
+                            <div class="bi bi-save-fill"></div>
                         </div>
                          
                         <div class="icon">
-                            <div class="bi bi-clipboard"></div>
+                            <div class="bi bi-clipboard-fill"></div>
                         </div>
                         <div class="icon">
                             <div class="bi bi-scissors"></div>
                         </div>
                         <div class="icon">
                             <div class="bi bi-trash"></div>
+                        </div>
+                        <div class="icon">
+                            <div class="bi bi-trash" id="icon" ondblclick="notesButton()"></div>
                         </div>
                     </div>
                 </div>
@@ -45,9 +46,9 @@
                <h2 class="app-head"> Make all your Tasks count Here!!</h2>
                 <div id="app">
                     <textarea class="note" style="background-color: pink;">Double-click to delete Notepad</textarea>
-                    <textarea class="note" style="background-color: palevioletred;">Some notes sample Texts</textarea>
+                    <!-- <textarea class="note" style="background-color: rgb(50, 205, 133);">Some notes sample Texts</textarea>
                     <textarea class="note" style="background-color: palegreen;">Some notes sample Texts</textarea>
-                    <textarea class="note" style="background-color: rgb(151, 151, 112);">Some notes sample Texts</textarea>
+                    <textarea class="note" style="background-color: rgb(151, 151, 112);">Some notes sample Texts</textarea> -->
                     
                     <button class="add-note" type="button">+</button>
                 </div>
