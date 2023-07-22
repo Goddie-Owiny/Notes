@@ -1,3 +1,4 @@
+// app features js
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-note");
 
@@ -9,7 +10,7 @@ getNotes().forEach(note =>{
 addNoteButton.addEventListener("click", () => addNote());
 
 function getNotes() {
-return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
+return JSON.parse(localStorage.getItem("stickynotes-notes") || "[0]");
 }
 
 function saveNotes(notes){
@@ -49,12 +50,12 @@ function addNote(){
 const noteElement = createNoteElement(noteObject.id, noteObject.content);
 notesContainer.insertBefore(noteElement, addNoteButton);
 
- notes.push(noteObject);
+notes.push(noteObject);
 saveNotes(notes);
 }
 
-function updateNote(id, newContent){
 const notes = getNotes();
+function updateNote(id, newContent){
 const targetNote = notes.filter(note => note.id == id)[0];
 
 targetNote.content = newContent;
@@ -65,5 +66,18 @@ function deleteNote(id, element){
    const notes = getNotes().filter(note => note.id != id);
 
    saveNotes(notes);
-   notesContainer.removeChild(id, element);
+   notesContainer.removeChild(element);
 };
+
+// end of app js
+function notesButton(){
+let noteBi = document.querySelector('#icon');
+
+noteBi.addEventListener("dbclick", () => {
+ console.log('clicked');
+});
+}
+
+
+// icon js
+
