@@ -69,15 +69,14 @@ function deleteNote(id, element){
    notesContainer.removeChild(element);
 };
 
+ 
+
 // end of app js
-function notesButton(){
-let noteBi = document.querySelector('#icon');
-
-noteBi.addEventListener("dbclick", () => {
- console.log('clicked');
-});
-}
-
 
 // icon js
 
+
+let iconStyle = document.querySelector(".bi-trash").addEventListener("dblclick", () => {
+    const doDelete = confirm("Are you sure you want to remove this content?");
+    
+})
